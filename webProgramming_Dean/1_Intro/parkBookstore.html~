@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf 8">
+		<meta name="author" content="Federico von Brudersdorff"> 
+		<title>Park University Bookstore</title>
+<style>
+	h1, div {text-align:right;}
+	hr {
+		margin-right: 0%;
+		width: 25%;
+	}
+</style>	
+	</head>
+
+	<body>
+		<h1>Park University Bookstore</h1>
+		<hr>
+		<div>
+			Store Hours: Mon-Fri 9-5<br>
+			916-584-6747<br>
+			http://www.park.edu/bookstore<br>
+			<br>
+			Park University<br>
+			Bookstore, box 56<br>
+			8700 N.W. River Park Drive<br>
+			Parkville, MO 64152<br>
+		</div>
+	</body>
+</html>

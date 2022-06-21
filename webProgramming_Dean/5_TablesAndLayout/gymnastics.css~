@@ -1,0 +1,38 @@
+.bold {font-weight: bold;}
+.italic {font-style: italic;}
+.right{right: 0;}
+
+html{
+	display: flex;
+	justify-content: left;
+}
+body {
+	margin: 20px;
+	position: relative;
+}
+ul {
+	margin: 0px;
+	list-style-type: circle;
+}
+h1{margin:5px;}
+header {
+	height: 80px;
+	width: 520px;
+	top: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: blue;
+	color: yellow;
+	text-align: center;
+}
+section{
+	width: 200px;
+	top: 90px;
+}
+figure {
+	margin: 0px;
+	top: 270px;
+}
+section, header, figure {position: absolute;}
+img, header, body {width: 420px;}
+figcaption {text-align: center;}

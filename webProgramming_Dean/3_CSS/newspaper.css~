@@ -1,0 +1,13 @@
+body {background-color: cyan;}
+h1, h4 {text-align: center;}
+h1 {
+	color: blue;
+	font-style: italic;
+}
+.bold {font-weight: bold;}
+.upper-case {text-transform: uppercase;}
+.underlined {text-decoration: underline;}
+.monospaced {font-family: Courier, Prestige, monospace;}
+.silver {color: hsl(0,0%,75%);}
+.fuchsia {color: #ff00ff;}
+.bright-orange {color: rgb(255,140,0);}

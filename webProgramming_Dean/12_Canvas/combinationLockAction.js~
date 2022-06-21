@@ -1,0 +1,12 @@
+/* * * * * * * * * * * * 
+ *
+ *  combinationLockAction.js
+ *  Federico von Brudersdorff
+ *  Action scripts for combinationLock.html
+ *
+ * * * * * * * * * * * */
+function nudge(contextId, steps) {
+	var context = document.getElementById(contextId).getContext("2d");
+	context.setTransform(1, 0, 0, 1, 0, 0);
+	context.clearRect(0, 0, canvas.width, canvas.height);
+}

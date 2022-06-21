@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset= "utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<link rel="stylesheet" href="storyGenerator.css">
+		<script src="storyGenerator.js"></script>
+		<title>Story Generator</title>
+	</head>
+	<body>
+		<section id="storygenerator">
+			<h1>Story Generator</h1>
+			<p>
+			Enter appropiate values in all of the text boxes. Then click the <span class="tahoma">Done</span> button to generate a story with your entered values plugged into it.
+			</p>
+			<form>
+				<div class="table">
+					<div class="box">
+						<label for="noun">noun:</label>
+						<input type="text" id="noun">
+					</div>
+					<div class="box">
+						<label for="pasttenseverb1">past tense verb:</label>
+						<input type="text" id="pasttenseverb1">
+					</div>
+					<div class="box">
+						<label for="adjective1">adjective:</label>
+						<input type="text" id="adjective1">
+					</div>
+					<div class="box">
+						<label for="pasttenseverb2">past tense verb:</label>
+						<input type="text" id="pasttenseverb2">
+					</div>
+					<div class="box">
+						<label for="adjective2">adjective:</label>
+						<input type="text" id="adjective2">
+					</div>
+					<br>
+					<div class="buttons">
+				</div>
+					<input type="button" value="Done" 
+					onclick = "processStory(new Array('noun', 'pasttenseverb1', 'adjective1', 'pasttenseverb2', 'adjective2'), 'story');
+					switchDisplays('storygenerator', 'storyframe');">
+					<input type="button" value="Reset" onclick = "resetForm(this.form, 5);">
+			</form>
+		</section>
+		<section id="storyframe">
+			<p id="story"></p>
+			<br>
+			<input type="button" value="Return" onclick = "switchDisplays('storyframe','storygenerator');">
+		</section>
+	</body>
+</html>

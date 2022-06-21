@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang ="es">
+	<head>
+		<meta http-equiv="Content Type" content="text/html; charset=iso-8859-1">
+		<meta charset="utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<title>Cuenta caracteres</title>
+		<script>
+			function countCharacters(textArea, output) {
+				document.getElementById(output).value = textArea.value.length;
+			}
+
+			function colourCharacters(highlightsAreaId, textAreaId, limitId) {
+				const LIM = document.getElementById(limitId).value;
+				const LEN = document.getElementById(textAreaId).value.length;
+				const HIGHLIGHT = document.getElementById(highlightsAreaId);
+				const TEXT = document.getElementById(textAreaId);	
+				
+				HIGHLIGHT.innerHTML = TEXT.value; 
+				if ((LIM != 0) && (LEN > LIM)) {
+					HIGHLIGHT.innerHTML = TEXT.value.substring(0,LIM)+"<span class='highlighted'>"
+									+TEXT.value.substring(LIM)+"</span>";
+				}
+				resizeHighlights (TEXT, highlightsAreaId);
+			}					 
+
+			function resizeHighlights (textArea, highlightsId) {
+				const HIGHLIGHT =document.getElementById(highlightsId);
+
+				HIGHLIGHT.style.width = textArea.style.width;
+				HIGHLIGHT.style.height = textArea.style.height;
+			}
+			
+			function scrollHighlight(textArea, highlightsId) {
+				document.getElementById("highlightsId").scrollTop = textArea.scrollTop;
+			}
+		</script>
+		<style>
+			html {display: flex}
+			body {
+				position: relative;
+				width: auto;
+				height: auto;
+			}
+			
+			.highlighted {
+				background-color: red;
+			}
+			.right{
+				position: relative; 
+				right: -425px;
+				top: 100px;
+			}
+			.left {
+				position: relative;
+				left: 0px;
+				top: 80px;
+			}
+			.backdrop {
+				overflow: auto;
+				z-index: 1;
+				position: absolute;
+			}
+			.highlights{
+				overflow: scroll;
+				white-space: pre-wrap;
+				word-wrap: break-word;
+				color: transparent;
+				width: 537px;
+				height: 87px;
+				border: 1px solid transparent;
+			}
+			#count {
+				width: 3em;
+				text-align: right;
+				border: none;
+			}
+			#count-label {
+				text-align: left;
+			}
+			#input-area {
+				position: absolute;
+				border-radius: 0;
+				margin: 0;
+				z-index: 2;
+				background-color: transparent;
+				width: 537px;
+				height: 87px;
+				padding: 0;
+				overflow: auto;
+				resize: none;
+				display: block;
+			}
+			#limit {
+				width: 3em;
+				text-align: center;
+			}
+			.highlights, #input-area {
+				font-family: monospace;
+				font-size: 10pt;
+			}
+			
+		</style>
+	</head>
+	<body> 
+		<div class="backdrop">
+			<div id="first-highlights" class="highlights">
+			</div>
+		</div>
+		<textarea id="input-area" autofocus spellcheck="false"
+			  onscroll = "scrollHighlight(this, 'first-highlights');"
+			  oninput = "countCharacters(this, 'count'); 
+			  	colourCharacters('first-highlights', 'input-area', 'limit');"
+		></textarea>
+		<div class="right">
+			<input id="count" readonly type="number" value="0">
+			<label id="count-label" for="count">caracteres</label>
+		</div>
+		<div class="left"> 
+			<label id="limit-label" for="limit">M&aacute;ximo:</label>
+			<input id="limit"  type="number" min="0" value="0" 
+				oninput = "colourCharacters('first-highlights','input-area','limit'); ">
+			<span>caracteres</span>
+		</div>
+		<div id="test"></div>
+	</body>
+</html>

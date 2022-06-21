@@ -1,0 +1,13 @@
+input {height: 1.5em}
+input:focus{
+	outline: none;
+	border-radius:2px;
+	border: 2px solid black;
+}
+input[type=number]:focus:invalid {
+	outline: none;
+	border-radius: 2px;
+	border: 2px solid red;
+}
+
+#roots {font-family: monospace}

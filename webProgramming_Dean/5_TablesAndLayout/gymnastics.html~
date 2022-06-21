@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content ="Federico von Brudersdorff">
+		<title>Gymnastics</title>
+		<link rel="stylesheet" href="gymnastics.css">
+	</head>
+	<body>
+		<header class="italic">
+			<h1>
+				Gymnastics
+				<br>
+				Go for the gold!
+			</h1>
+		</header>
+
+		<section id="Female">
+			<span class="bold">Greatest Female Gymnasts</span>
+			<ul>
+				<li>Rumania:
+					<ol>
+						<li>Nadia Comaneci</li>
+					</ol>
+				</li>
+				<li>Russia:
+					<ol start="2">
+						<li>Olga Korbut</li>
+						<li>Larisa Latynina</li>
+					</ol>
+				</li>
+				<li>United States:
+					<ol start="4">
+						<li>Gabby Douglas</li>
+						<li>Mary Lou Retton</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+		<section class="right" id="Male">
+			<span class="bold">Greatest Male Gymnasts</span>
+			<ul>
+				<li>Russia:
+					<ol>
+						<li>Vitaly Scherbo</li>
+						<li>Alexei Nemov</li>
+						<li>Nikolai Adrianov</li>
+					</ol>
+				</li>
+				<li>Japan:
+					<ol start="4">
+						<li>Sawao Kato</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+		<figure>
+			<img src="Nadia_Comaneci.jpg" alt="Nadia Comaneci"> 
+			<figcaption>Flying through the Air with the Greatest of Ease</figcaption>
+		</figure>
+	</body>
+</html>
+

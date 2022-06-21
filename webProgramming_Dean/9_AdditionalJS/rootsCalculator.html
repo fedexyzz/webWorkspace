@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<script src="rootsCalculator.js"></script>
+		<title>Quadratic Equation Roots Calculator</title>
+		<link rel="stylesheet" href="rootsCalculator.css">
+	</head>
+	<body>
+		<h1>Quadratic Equation Roots Calculator</h1>
+		<div>
+			This web page finds the root of a polynomial equation of the following form: 
+			<i>ax<sup>2</sup> + bx + c = 0</i>.
+		</div>
+		<br>
+		<div>
+			<i>a, b,</i> and <i>c</i> must be integers between -99 and +99, and <i>a</i> must be non-zero.
+		</div>
+		<br>
+		<form>
+			<div class="input">
+				<span class="inputBox">
+					<label for="aBox"><i>a</i>:</label>
+					<input id="aBox" type="number" max="99" min="-99" required> 
+				</span>
+				<span class="inputBox">
+					<label for="bBox"><i>b</i>:</label>          
+					<input id="bBox" type="number" max="99" min="-99" required>
+				</span>
+				<span class="inputBox">
+					<label for="cBox"><i>c</i>:</label>                      
+					<input id="cBox" type="number" max="99" min="-99" required>
+				</span>
+			</div>
+			<br>
+			<input type="button" value="Calculate roots" 
+					     onclick = "processRootsForm('aBox', 
+					     'bBox',
+					     'cBox',
+					     'roots');">
+		</form>
+		<br>
+		<div id="roots"></div>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+body {background-color: khaki;}
+header {
+	background-color: indigo;
+	color: white;
+	text-align: left;
+}
+aside {
+	float: right;
+	background-color: white;
+	margin: 0px;
+	color: black;
+	margin: 5px;
+	padding: 10px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+a:hover {text-decoration: underline}
+section h3{
+	color:white;
+	background-color: deeppink;
+}
+.bold {font-weight: bold}
+img {max-width: 40%}

@@ -1,0 +1,29 @@
+html {
+	display: flex;
+	justify-content: center;
+}
+body {
+	position: relative;
+}
+caption {
+	font-size: 20pt;
+	padding: 5px;
+}
+table {
+	width: 440px;
+}	
+thead {
+	background-color: red;
+	color: white;
+}
+table, th, td {
+	border-style: double;
+	border-width: thin;
+	border-collapse: default;
+}
+th, td {padding: 10px}
+
+td:nth-of-type(2), td:nth-of-type(3){text-align:center;}
+
+.italics {text-decoration: italic;}
+.bold {font-weight: bold;}

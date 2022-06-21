@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<title>The American Dream</title>
+		<link rel="stylesheet" href="wealth.css">
+	</head>
+	<body>
+		<header>
+			<aside>
+				<span class="bold"> TNN New, Tuesday March 6, 8pm EST </span>
+				<br>
+				Author Robert Strausser presents "Survival of the Wealthiest"
+			</aside>
+			<h1>The American Dream</h1>
+			<h2>Work hard and become wealthy?
+			<br>
+			Maybe so, but work alone might not cut it. The following graphs<sup><a href="#footnotes">[1]</a></sup> show various paths to prosperity.
+			</h2>
+		</header>
+
+		<section id="Education">
+			<h3>Education</h3>
+			<p>
+				More advanced schooling helps. If you can avoid the crushing debt of sudent loans, all the better. Try to find a major that is good to you.
+			</p>
+			<figure>
+				<img src="MapWidget.png" alt="placeholder image">
+			</figure>
+		</section>
+
+		<section id="Birthright">
+			<h3>Birthright</h3>
+			<p>
+				For accruing wealth, what's even better than education? Being born wealthy. In the graph below, note how the birthright high enders are able yo becomr more wealthy than the education high enders. So before being born, shop around.
+			</p>
+			<figure>
+				<img src="EnterprisePerformance.png" alt="placeholder image">
+			</figure>
+		</section>
+
+		<footer id="footnotes">
+			1. Although the graphs' data is fabricated, the trends are real. See Lisa Keister's "Getting Rich: America's New Rich and How They Got That Way" and Pew Charitable Trusts' "Economic Mobility Project".
+	</body>	
+</html>

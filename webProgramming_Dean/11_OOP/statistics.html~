@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<script src="statistics.js"></script>
+		<title>Statistics Calculator</title>
+	</head>
+	<body>
+		<h1>Statistics Calculator</h1>
+		<h3>Enter a  list of numbers separated by spaces</h3>
+		<form>
+			<label for="number-list">Number list:</label>
+			<input id="number-list" type="text" size="20">
+			<br><br>
+			<div style="display: table; border-collapse: separate; ">
+				<div style="display:table-row; ">
+					<div style="display: table-cell; border-right: 20px solid transparent;">
+						<input  type="button" value="Mean" 
+							onclick = "calculate('number-list', 'result', 1); ">
+					</div>
+					<div style="display: table-cell; border-right: 20px solid transparent;">
+						<input type="button" value="Variance" 
+							onclick = "calculate('number-list', 'result', 2); ">
+					</div>
+					<div style="display: table-cell">
+						<input type="button" value="Standard Deviation" 
+							onclick = "calculate('number-list', 'result', 3); ">
+					</div>
+				</div>
+			</div>
+		</form>
+		<br>
+		<span id="result" style="display: none;"></span>
+	</body>
+</html>

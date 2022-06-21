@@ -1,0 +1,35 @@
+.table {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 5px 1px;
+}
+.box {
+	display: table-row;
+}
+.box > * {
+	display: table-cell;
+}
+.tahoma {
+	font-family: Tahoma; "sans-serif";
+}
+.red {
+	color: red;
+}
+
+label {
+	text-align: right;
+}
+input {
+	text-align: left;
+}
+
+#storygenerator {
+	display: block;
+}
+#storyframe {
+	display: none;
+}
+#story {
+	color: blue;
+	font-family: "Comic Sans MS", "Comic Sans", "Papyrus", "sans-serif";
+}

@@ -1,0 +1,17 @@
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	text-transform: uppercase;
+}
+p {
+	border-style: dashed;
+	border-color: red;
+	text-indent: 10px; 
+	text-align: justify;
+	padding: 50px;
+	margin: 0px 50px;
+	font-family: Times, serif;
+}
+p.gray-background {background-color: gray;}
+.strike-through {text-decoration: line-through;}
+.bold {font-weight: bold}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Federico von Brudersdorff">
+		<title>Compass Game</title>
+		<link rel="icon" href="images/biArrow.png">
+		<link rel="stylesheet" href="compassGame.css">
+		<script type="text/javascript" src="compassGame.js"></script>
+	<body>
+		<noscript>
+			<p>
+				This web page uses JavaScript. For proper results, you must use a web browser with JavaScript enabled.
+			</p>
+		</noscript>
+		<h1>Compass Game</h1>
+		<p>
+		The direction letters on the "compass" are scrambled. Press the arrows to properly position the direction letters.
+		</p>
+		<div class="table">
+			<div class ="table-row">
+				<div class="table-cell">
+					<button id="topleft" onclick = "swapValues('left', 'top') ;">
+						<img src="images/biArrow.png" id="arrow" class="diagonal"> 
+					</button>
+				</div>
+				<div class="table-cell" id="top">
+					E
+				</div>
+				<div class="table-cell">
+				</div>
+			</div>
+			<div class ="table-row">
+				<div class="table-cell" id="left">
+					S
+				</div>
+				<div class="table-cell">
+					<button id="center" onclick = "swapValues('left', 'right') ;">
+						<img src="images/biArrow.png" id="arrow">
+					</button>
+				</div>
+				<div class="table-cell" id="right">
+					W
+				</div>
+			</div>
+			<div class ="table-row">
+				<div class="table-cell">
+				</div>
+				<div class="table-cell" id="bottom">
+					N		
+				</div>
+				<div class="table-cell">
+					<button id="bottom-right" onclick = "swapValues('bottom','right') ;">
+						<img class="diagonal" src="images/biArrow.png" id="arrow">
+					</button>
+				</div>
+			</div>
+		</div>
+		<p>
+		To restart the game, press <span class="italics">Restart</span>, enter N, S, E, W in any order in the boxes below, and then press <span class="italics">Update</span>.
+		</p>
+		<form>
+			<input type="button" value="Restart" 
+				onclick = "restartValues(['top','bottom','left','right']);
+					disableInput(this.form, false);">
+			<br>
+			<br>
+			Top:
+			<input type="text" disabled size="1" maxlength="1" placeholder="?" id="topBox">
+			Left:
+			<input type="text" disabled size="1" maxlength="1" placeholder="?" id="leftBox">
+			Right:
+			<input type="text" disabled size="1" maxlength="1" placeholder="?" id="rightBox">
+			Bottom:
+			<input type="text" disabled size="1" maxlength="1" placeholder="?" id="bottomBox">
+			<br>
+			<br>
+			<input type="button" id="update" disabled value="Update" 
+				onclick = "updateValues(this.form, new Array('top','bottom','right','left'), new Array('topBox','bottomBox','leftBox','rightBox'));
+					resetForm(this.form,new Array('topBox','bottomBox','leftBox','rightBox'));">
+			<br>
+			<br>
+			<input type="button" id="shuffle" value="Shuffle" 
+				onclick = "shuffleCompass(new Array('top','bottom','right','left'), new Array('N','S','W','E'));
+					resetForm(this.form, ['topBox','bottomBox', 'leftBox', 'rightBox']);
+					disableInput(form, new Array('topBox','bottomBox', 'leftBox', 'rightBox","update"), true);">
+		</form>
+	</body>
+</html>
+

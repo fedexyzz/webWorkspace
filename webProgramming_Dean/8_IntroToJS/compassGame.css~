@@ -1,0 +1,29 @@
+.table {
+	font-weight: bold;
+	color: red;
+	font-size: 24pt;
+	display: table;
+	width: 25%;
+}
+.table-row {display: table-row;}
+.table-cell {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: 33%;
+	height: 33%;
+}
+.diagonal {
+	transform: rotate(-45deg);
+}
+.italics {font-style: italic;}
+
+#arrow {
+	height: 90%;
+	width: 90%;
+}
+
+button {
+	width: 90%;
+	height: 90%;
+}
