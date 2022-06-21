@@ -19,6 +19,7 @@ function drawLock(canvasId, steps) {
 	context = canvas.getContext("2d");
 	context.translate(WIDTH/2, HEIGHT/2);
 	context.save();
+	context.rotate(steps * 2*Math.PI /40);
 
 	drawCircle(context, 0, 0, MAX_RADIUS, "lightSteelBlue", "grey");
 	drawCircle(context, 0, 0, MAX_RADIUS*0.85, "", "grey"); 
@@ -28,10 +29,9 @@ function drawLock(canvasId, steps) {
 	drawMarks(context, MAX_RADIUS*0.83, "white");
 	
 	drawWord(context, "Dogo", "white");
-	context.rotate(steps * 2*Math.PI /40);
 
-	drawTriangle(context, "red", "darkRed");
 	context.restore();
+	drawTriangle(context, "red", "darkRed");
 }
 
 function drawCircle(context, x, y, radius, fillColor, strokeColor) {

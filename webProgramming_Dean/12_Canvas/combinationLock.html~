@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="author" content="Federico von Brudersdorff">
 		<title>Combination Lock</title>
-		<script src=combinationLock.js></script>
-		<script src=combinationLockAction.js></script>
+		<script src="combinationLock.js"></script>
+		<script src="combinationLockAction.js"></script>
 		<link rel="stylesheet" href="combinationLock.css">
 	</head>
 	<body onload = "drawLock('lock', 0);">
@@ -17,7 +17,7 @@
 				<span class="cell-top left">
 					<input type="button" value="Nudge left" onclick = "nudge('lock', -1);">
 				</span>
-				<span class="cell-top right">
+				<span class="cell-top right" onclick = "nudge('lock', 1); ">
 					<input type="button" value="Nudge right">
 				</span>
 			</div>
