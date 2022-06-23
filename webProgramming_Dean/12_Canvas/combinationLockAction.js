@@ -14,7 +14,7 @@ function nudge(canvasId, steps) {
 	drawLock(canvasId, offset + steps);
 	offset += steps;
 	while (offset >= 40) {offset -= 40};
-	while (offset <= 40) {offset += 40};	
+	while (offset <= -40) {offset += 40};	
 }
 
 function nudgeLeft() {
