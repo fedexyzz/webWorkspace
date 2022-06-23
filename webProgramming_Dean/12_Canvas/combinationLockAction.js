@@ -21,5 +21,12 @@ function nudgeLeft() {
 	nudge('lock', -1);
 }
 
-function toTarget(factor, steps) {
+function toTarget(canvasId, factor, steps) {
+	for (let i = 0; i < steps; i++) {
+		nudge(canvasId, factor);
+	}
+}
 
+function nudgeRight() {
+	nudge('lock', 1);
+}
