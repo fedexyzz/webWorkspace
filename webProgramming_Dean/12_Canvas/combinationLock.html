@@ -15,10 +15,10 @@
 		<div class="table" id="buttons">
 			<div class="row">
 				<span class="cell-top left">
-					<input type="button" value="Nudge left" onclick = "nudge('lock', -1);">
+					<input type="button" value="Nudge left" onclick = "nudgeLeft(); ">
 				</span>
-				<span class="cell-top right" onclick = "nudge('lock', 1); ">
-					<input type="button" value="Nudge right">
+				<span class="cell-top right">
+					<input type="button" value="Nudge right" onclick = "nudgeRight(); ">
 				</span>
 			</div>
 		</div>
@@ -29,10 +29,12 @@
 					<label for="target">Target: </label>
 					<input id="target" type="number" min="0" max="39">
 				</span>
-				<span class="cell-bottom" onclick= "toTarget(-1. 'target');">
+				<span class="cell-bottom" 
+					onclick = "toTargetLeft(parseInt(document.getElementById('target').value));">
 					<input type="button" value="Left to target">
 				</span>
-				<span class="cell-bottom right" onclick = "toTarget(1, 'target');">
+				<span class="cell-bottom right" 
+					onclick = "toTargetRight(parseInt(document.getElementById('target').value));">
 					<input type="button" value="Right to target">
 				</span>
 			</div>
